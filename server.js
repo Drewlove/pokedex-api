@@ -13,7 +13,6 @@ app.use(helmet());
 app.use(cors()); 
 
 app.use(function validateBearerToken(req, res, next) {
-    res.json('yes, works')
   const apiToken = process.env.API_TOKEN;
   const authToken = req.get('Authorization');
 
